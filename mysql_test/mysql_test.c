@@ -16,7 +16,6 @@ int main()
 
     if (!mysql_real_connect(conn,server,user,password,database,0,NULL,0))
     {
-        printf("yyang test mysql failed!\n");
         exit(1);
 
     }
@@ -24,13 +23,11 @@ int main()
     if (mysql_query(conn,"show tables"))
     {
 	
-        printf("yyang test mysql show tables failed!\n");
 	exit(1);
     }
 
     res = mysql_use_result(conn);
 
-    printf("MySQL Tables in mysql database\n");
 
     while ((row = mysql_fetch_row(res)) !=NULL)
     {
@@ -39,7 +36,6 @@ int main()
 
     mysql_free_result(res);
     mysql_close(conn);
-    printf("finished!\n");
     return 0;
 
 }
