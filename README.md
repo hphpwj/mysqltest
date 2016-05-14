@@ -1,2 +1,0 @@
-# mysqltest
-mysqltest project
