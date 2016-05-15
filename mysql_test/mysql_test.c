@@ -12,6 +12,7 @@ int main()
     char password[] = "123456";
     char database[] = "mysql";
 
+    // mysql init
     conn = mysql_init(NULL);
 
     if (!mysql_real_connect(conn,server,user,password,database,0,NULL,0))
